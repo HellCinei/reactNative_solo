@@ -1,10 +1,17 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 import { Icon, Image } from "react-native-elements";
 import { styles } from "./style";
 import imgPerfil from "../../assets/imagePerfil/Tartaglia.png";
+import { useNavigation } from "@react-navigation/native";
 
 export function HeaderHome() {
+	const navigate = useNavigation();
+
+	const goLogin = () => {
+		navigate.navigate("Login");
+	};
+
 	return (
 		<View style={styles.container}>
 			<View style={styles.menu}>
@@ -15,9 +22,9 @@ export function HeaderHome() {
 			<View style={styles.perfil}>
 				<Icon style={styles.icone} name="search" type="feather" size={25} />
 				<Icon style={styles.icone} name="translate" type="material-icon" size={25} />
-				<View style={styles.perfilFrame}>
+				<TouchableOpacity onPress={goLogin} style={styles.perfilFrame}>
 					<Image style={styles.perfilImg} source={imgPerfil}/>
-				</View>
+				</TouchableOpacity>
 			</View>
 		</View>
 	);

@@ -10,8 +10,15 @@ import { Icon } from "react-native-elements";
 import { ButtonComponent } from "../../components/ButtonComponent";
 import { TextInputField } from "../../components/TextInput";
 import styles from "./style";
+import { useNavigation } from "@react-navigation/native";
 
 export function Login() {
+	const navigate = useNavigation();
+
+	const goHome = () => {
+		navigate.navigate("Home");
+	};
+
 	const [email, setEmail] = useState<string>("");
 	const [senha, setSenha] = useState<string>("");
 
@@ -75,7 +82,7 @@ export function Login() {
 					<Text style={styles.link}> password</Text>?
 				</Text>
 
-				<ButtonComponent texto="Log in" />
+				<ButtonComponent handleFunction={goHome} texto="Log in" />
 
 				<Text style={styles.info}>
 					New to Reddit?

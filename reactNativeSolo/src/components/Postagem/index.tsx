@@ -22,11 +22,11 @@ export default function Postagem() {
 						</View>
 						<Text style={styles.txtPost}>{item.texto}</Text>
 						{item.conteudo && (
-							<Image
-								style={styles.imgPost}
-								source={item.conteudo}
-								alt="Post img"
-							/>
+								<Image
+									style={styles.imgPost}
+									source={item.conteudo}
+									alt="Post img"
+								/>
 						)}
 						<FooterPost />
 					</View>

@@ -4,9 +4,10 @@ import { styles } from "./style";
 interface PropsButton {
 	texto: string | number;
 	corFundo?: string;
+	handleFunction?: () => void; 
 }
 
-export const ButtonComponent = ({texto, corFundo, }: PropsButton) => {
+export const ButtonComponent = ({texto, corFundo, handleFunction}: PropsButton) => {
 	 
 
 	return (
@@ -15,6 +16,7 @@ export const ButtonComponent = ({texto, corFundo, }: PropsButton) => {
 			style={[styles.botao, {
 				backgroundColor: corFundo ? corFundo : "orange"
 			}]}
+			onPress={handleFunction}
 		>
 			<Text style={styles.texto}>
 				{texto}

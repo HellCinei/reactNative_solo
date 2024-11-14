@@ -44,14 +44,15 @@ export const styles = StyleSheet.create({
 		fontSize: 15,
 		color: "#444",
 	},
-
+	
 	imgPost: {
-		height: 375,
-		maxWidth: "100%",
-		resizeMode: "cover",
+		height: 365,
+		width: 365,
+		resizeMode: "stretch",
 		borderRadius: 15,
 		marginVertical: 15,
 		borderWidth: 1,
+		borderColor: "#ddd",
 	},
 
 });

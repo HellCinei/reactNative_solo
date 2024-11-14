@@ -40,14 +40,14 @@ export const styles = StyleSheet.create({
 	},
 
 	textDiv: {
-		color: '#555',
+		color: '#ddd',
 		fontSize: 15,
 	},
 
 	linha: {
 		width: '40%',
 		height: 1,
-		backgroundColor: '#555',
+		backgroundColor: '#ddd',
 	},
 
 	botao: {
