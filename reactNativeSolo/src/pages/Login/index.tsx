@@ -75,7 +75,7 @@ export function Login() {
 					<Text style={styles.link}> password</Text>?
 				</Text>
 
-				<ButtonComponent texto="Sign-in" />
+				<ButtonComponent texto="Log in" />
 
 				<Text style={styles.info}>
 					New to Reddit?
